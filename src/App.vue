@@ -1,15 +1,24 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <div>
+    <ThemeToggle></ThemeToggle>
+    <router-view></router-view>
+  </div>
+
+
+
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import ThemeToggle from "./components/ThemeToggle.vue"
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    ThemeToggle
   }
 }
 </script>
@@ -22,5 +31,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.dark{
+  background-color: #697179;
+  color: white;
+}
+
+.dark-btn{
+  background-color: aliceblue;
 }
 </style>
